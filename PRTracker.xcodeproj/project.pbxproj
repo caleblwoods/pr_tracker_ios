@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BCCFB90AE54976F17F8E1DCF /* libPods-PRTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38292F32BA1F5E9568176194 /* libPods-PRTrackerTests.a */; };
 		D528ADB721979FB13E12B42C /* Pods_PRTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683936E04AC74E59EC72323D /* Pods_PRTracker.framework */; };
+		F97F83072081AE8A007A98C5 /* WeightOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F83062081AE8A007A98C5 /* WeightOptions.swift */; };
+		F97F830B2081B133007A98C5 /* WeightOptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F830A2081B133007A98C5 /* WeightOptionCollectionViewCell.swift */; };
+		F97F830D2081B4F7007A98C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F97F830C2081B4F7007A98C5 /* GoogleService-Info.plist */; };
 		F98699FD207B095D002D915E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98699FC207B095D002D915E /* AppDelegate.swift */; };
 		F9869A02207B095E002D915E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9869A00207B095E002D915E /* Main.storyboard */; };
 		F9869A04207B095E002D915E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9869A03207B095E002D915E /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		634E9FD77A54616625C2A826 /* Pods-PRTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PRTrackerTests/Pods-PRTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		683936E04AC74E59EC72323D /* Pods_PRTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C878800EF03C3DB67B2B65 /* Pods-PRTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PRTrackerTests/Pods-PRTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F97F83062081AE8A007A98C5 /* WeightOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOptions.swift; sourceTree = "<group>"; };
+		F97F830A2081B133007A98C5 /* WeightOptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		F97F830C2081B4F7007A98C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F98699F9207B095D002D915E /* PRTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98699FC207B095D002D915E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9869A01207B095E002D915E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +94,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F97F83082081AE94007A98C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F97F83062081AE8A007A98C5 /* WeightOptions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F97F83092081B10D007A98C5 /* WeightOptionCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F97F830A2081B133007A98C5 /* WeightOptionCollectionViewCell.swift */,
+			);
+			path = WeightOptionCollectionView;
+			sourceTree = "<group>";
+		};
 		F98699F0207B095D002D915E = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +136,12 @@
 				F98699FC207B095D002D915E /* AppDelegate.swift */,
 				F9869A1C207B0A26002D915E /* MainViewController.swift */,
 				F9869A00207B095E002D915E /* Main.storyboard */,
+				F97F83082081AE94007A98C5 /* Models */,
 				F9869A1E207B0A2D002D915E /* UI */,
 				F9869A03207B095E002D915E /* Assets.xcassets */,
 				F9869A05207B095E002D915E /* LaunchScreen.storyboard */,
 				F9869A08207B095E002D915E /* Info.plist */,
+				F97F830C2081B4F7007A98C5 /* GoogleService-Info.plist */,
 			);
 			path = PRTracker;
 			sourceTree = "<group>";
@@ -135,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F9869A1F207B0A4A002D915E /* WeightDrawerView.swift */,
+				F97F83092081B10D007A98C5 /* WeightOptionCollectionView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -228,6 +253,7 @@
 				F9869A07207B095E002D915E /* LaunchScreen.storyboard in Resources */,
 				F9869A04207B095E002D915E /* Assets.xcassets in Resources */,
 				F9869A02207B095E002D915E /* Main.storyboard in Resources */,
+				F97F830D2081B4F7007A98C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,13 +274,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PRTracker/Pods-PRTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -307,6 +337,8 @@
 				F98699FD207B095D002D915E /* AppDelegate.swift in Sources */,
 				F9869A20207B0A4A002D915E /* WeightDrawerView.swift in Sources */,
 				F9869A1D207B0A26002D915E /* MainViewController.swift in Sources */,
+				F97F830B2081B133007A98C5 /* WeightOptionCollectionViewCell.swift in Sources */,
+				F97F83072081AE8A007A98C5 /* WeightOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

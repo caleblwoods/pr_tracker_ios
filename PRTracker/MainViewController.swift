@@ -7,25 +7,24 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var toggleDrawerButton: UIButton!
     @IBOutlet weak var weightsDrawer: WeightDrawerView!
-    var drawerIsHidden: Bool = false
+    
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func toggleDrawer(_ sender: Any) {
-        if drawerIsHidden {
-            weightsDrawer.showDrawer()
-            drawerIsHidden = false
-        } else {
-            weightsDrawer.hideDrawer()
-            drawerIsHidden = true
-        }
+        
+        toggleDrawerButton.rx
+            .controlEvent(UIControlEvents.touchUpInside)
+            .bind {
+                self.weightsDrawer.toggle()
+            }
+            .disposed(by: bag)
     }
 }

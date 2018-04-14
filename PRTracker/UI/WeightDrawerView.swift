@@ -26,15 +26,28 @@ class WeightDrawerView: UIView {
         height = frame.height
     }
     
-    func hideDrawer() {
-        guard let height = height else { return }
-        UIView.animate(withDuration: 0.4) {
-            self.frame.origin.y = self.frame.origin.y + height
+    func toggle() {
+        if isHidden {
+            showDrawer()
+        } else {
+            hideDrawer()
         }
     }
     
-    func showDrawer() {
+    private func hideDrawer() {
         guard let height = height else { return }
+        UIView.animate(withDuration: 0.4, animations: {
+            self.frame.origin.y = self.frame.origin.y + height
+        }) { (_) in
+            DispatchQueue.main.async {
+                self.isHidden = true
+            }
+        }
+    }
+    
+    private func showDrawer() {
+        guard let height = height else { return }
+        isHidden = false
         UIView.animate(withDuration: 0.4) {
             self.frame.origin.y = self.frame.origin.y - height
         }
